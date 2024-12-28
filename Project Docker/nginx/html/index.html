@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Docker-Compose</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a2a48; /* Navy background */
+      color: #ffffff; /* White text */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    /* Hamburger Menu Styles */
+    .hamburger {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 4px;
+      background-color: #ffffff; /* White color */
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: -200px;
+      width: 200px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.733); /* Black semi-transparent */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: left 0.3s ease;
+    }
+
+    .menu a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 10px 0;
+      transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #add8e6; /* Light blue */
+    }
+
+    .menu.open {
+      left: 0;
+    }
+
+    /* Content Styles */
+    .content {
+      text-align: center;
+      max-width: 600px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1); /* Semi-transparent overlay */
+      border: 2px solid #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #f0f8ff; /* Light navy */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #dcdcdc; /* Light gray */
+    }
+
+    /* Footer Styles */
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #dcdcdc;
+    }
+
+    footer a {
+      color: #f0f8ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="menu" id="menu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="content">
+    <h1>Docker-Compose NGINX Application</h1>
+    <p>
+      Ini adalah contoh hasil dari penerapan service NGINX pada Docker Compose. 
+      Website ini dimodifikasi sedemikian rupa  
+      oleh Mohammad Tyas Subianto dan Ivan Cahya Aryasuta.
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2024 Tyas dan Ivan | <a href="https://github.com/Underag3/project-AKSO">Github Repository</a>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
